@@ -7,6 +7,9 @@ import typeDefs from "./api/schema.js"
 import resolvers from "./api/resolvers.js"
 
 import {ApolloServer} from "apollo-server-express";
+import mongoose from "mongoose";
+
+mongoose.connect('mongodb://localhost/todos', {useNewUrlParser: true});
 
 const app = express();
 

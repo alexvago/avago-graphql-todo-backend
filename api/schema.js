@@ -6,19 +6,19 @@ const typeDefs = gql`
     }
 
     type Todo {
-        id: Int
+        id: String
         text: String
         done: Boolean
     }
     
     type Query {
         allTodos: [Todo]
-        todo(id: Int!): Todo
+        todo(id: String!): Todo
     }
 
     type Mutation {
         addTodo(input: TodoInput): Todo
-        toggleTodo(id: Int!): Todo
+        toggleTodo(id: String!): Todo
     }
 `;
 
